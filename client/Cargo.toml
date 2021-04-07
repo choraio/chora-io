@@ -1,0 +1,28 @@
+[package]
+authors = ["admin <admin@chora.io>"]
+description = "decentralized protocol research and development"
+edition = "2018"
+license = "GPL-3.0"
+name = "chora-io-client"
+readme = "./README.md"
+repository = "https://github.com/choraio/chora-io.git"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pulldown-cmark = { version = "0.7.0", default-features = false }
+wasm-bindgen = "0.2.67"
+yew = "0.17.3"
+yew-router = "0.14.0"
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
